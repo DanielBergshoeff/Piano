@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Instructions:
-  - MyInstruction: {fileID: 11400000, guid: 6df45b82ee38ed747ac91250a025bc0a, type: 2}
+  - MyInstruction: {fileID: 11400000, guid: 310a5425a72ec934a8f13338fc9ce96e, type: 2}
     MyHints:
     - Text: Woah! 5 seconds have passed!
       StartHint: 5
