@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f8f6cbe62f43242bb4c2bd76992a66, type: 3}
+  m_Script: {fileID: 11500000, guid: b2f1e12b03c5cd1409316b667b960390, type: 3}
   m_Name: PlayTilTrigger
   m_EditorClassIdentifier: 
   SoundToPlay: {fileID: 8300000, guid: a2a21222e7bf3c04b9a84686ac7ce24f, type: 3}
