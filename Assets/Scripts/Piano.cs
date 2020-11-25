@@ -6,27 +6,21 @@ using UnityEngine;
 
 public class Piano : MonoBehaviour
 {
-    public List<Instruction> Instructions;
+    public List<InstructionToHints> Instructions;
     public Instruction TestInstruction;
 
     public GameObject Player;
-
-    [Header("MoveTo")]
-    public float MinTimePerUpdate;
-    public float MaxTimePerUpdate;
-    public float MinMoveDistance;
-    public float SuccesDistance;
     public Transform Target;
 
-    [Header("Play until trigger")]
-    public GameObject Trigger;
-
+    public StringEvent DialogueEvent;
 
     [HideInInspector]
     public AudioSource MyAudioSource;
 
     private Instruction currentInstruction;
+    private List<Hint> currentHints;
     private int currentInstructionNr;
+    private float currentInstructionTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +28,12 @@ public class Piano : MonoBehaviour
         MyAudioSource = gameObject.AddComponent<AudioSource>();
         MyAudioSource.spatialBlend = 1f;
 
-        TestInstruction.OnInitialize(this);
-        SwitchInstructions(TestInstruction);
+        foreach(InstructionToHints ith in Instructions) {
+            ith.MyInstruction.OnInitialize(this);
+        }
+
+        //TestInstruction.OnInitialize(this);
+        SwitchInstructions(Instructions[0]);
     }
 
     // Update is called once per frame
@@ -45,6 +43,14 @@ public class Piano : MonoBehaviour
             return;
 
         currentInstruction.OnUpdate();
+        currentInstructionTimer += Time.deltaTime;
+
+        for (int i = currentHints.Count -1; i >= 0; i--) {
+            if (currentInstructionTimer > currentHints[i].StartHint) {
+                DialogueEvent.Raise(currentHints[i].Text);
+                currentHints.Remove(currentHints[i]);
+            }
+        }
 
         if (currentInstruction.CheckForCompletion()) {
             NextInstruction();
@@ -58,21 +64,36 @@ public class Piano : MonoBehaviour
             SwitchInstructions(null);
     }
 
-    private void SwitchInstructions(Instruction newInstruction) {
+    private void SwitchInstructions(InstructionToHints newInstruction) {
         if(currentInstruction != null) {
             currentInstruction.OnStop();
         }
 
-        currentInstruction = newInstruction;
-        currentInstructionNr++;
+        if (newInstruction == null) {
+            currentInstruction = null;
+        }
+        else {
+            currentInstruction = newInstruction.MyInstruction;
+            currentHints = newInstruction.MyHints;
+            currentInstructionNr++;
+            currentInstructionTimer = 0f;
 
-        if(currentInstruction != null)
-            currentInstruction.OnStart();
-    }
-
-    public void OnObjectTrigger(ColliderGameObject cgo) {
-        if (cgo.GameObject == Trigger) {
-            NextInstruction();
+            if (currentInstruction != null)
+                currentInstruction.OnStart();
         }
     }
+}
+
+[System.Serializable]
+public class InstructionToHints
+{
+    public Instruction MyInstruction;
+    public List<Hint> MyHints;
+}
+
+[System.Serializable]
+public class Hint
+{
+    public string Text;
+    public float StartHint;
 }
