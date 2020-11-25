@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{b5416762-e568-4a75-b3ca-5e4fe5d88a74}">
+	<object class="AudioFile" id="{15821521-09c2-4107-b587-5e299e96057f}">
 		<property name="assetPath">
-			<value>HotCold/HotCold2End.wav</value>
+			<value>PianoBeckon/PianoBeckon.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>3.6363750000000001</value>
+			<value>5.4000000000000004</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{fd1df9c6-44a9-4e92-9c67-cb607452be7b}</destination>

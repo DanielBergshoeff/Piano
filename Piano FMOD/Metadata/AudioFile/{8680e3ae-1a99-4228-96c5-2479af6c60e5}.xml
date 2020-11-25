@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{8680e3ae-1a99-4228-96c5-2479af6c60e5}">
 		<property name="assetPath">
-			<value>HotCold1End.wav</value>
+			<value>HotCold/HotCold1End.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
