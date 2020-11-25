@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityAtoms.BaseAtoms;
+using UnityAtoms.MonoHooks;
 using UnityEngine;
 
 public class Piano : MonoBehaviour
@@ -8,13 +10,17 @@ public class Piano : MonoBehaviour
     public Instruction TestInstruction;
 
     public GameObject Player;
-    public Transform Target;
 
     [Header("MoveTo")]
     public float MinTimePerUpdate;
     public float MaxTimePerUpdate;
     public float MinMoveDistance;
     public float SuccesDistance;
+    public Transform Target;
+
+    [Header("Play until trigger")]
+    public GameObject Trigger;
+
 
     [HideInInspector]
     public AudioSource MyAudioSource;
@@ -41,11 +47,15 @@ public class Piano : MonoBehaviour
         currentInstruction.OnUpdate();
 
         if (currentInstruction.CheckForCompletion()) {
-            if (currentInstructionNr + 1 < Instructions.Count)
-                SwitchInstructions(Instructions[currentInstructionNr + 1]);
-            else
-                SwitchInstructions(null);
+            NextInstruction();
         }
+    }
+
+    private void NextInstruction() {
+        if (currentInstructionNr + 1 < Instructions.Count)
+            SwitchInstructions(Instructions[currentInstructionNr + 1]);
+        else
+            SwitchInstructions(null);
     }
 
     private void SwitchInstructions(Instruction newInstruction) {
@@ -58,5 +68,11 @@ public class Piano : MonoBehaviour
 
         if(currentInstruction != null)
             currentInstruction.OnStart();
+    }
+
+    public void OnObjectTrigger(ColliderGameObject cgo) {
+        if (cgo.GameObject == Trigger) {
+            NextInstruction();
+        }
     }
 }
