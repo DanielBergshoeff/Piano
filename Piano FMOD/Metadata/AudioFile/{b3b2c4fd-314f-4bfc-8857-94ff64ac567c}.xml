@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b3b2c4fd-314f-4bfc-8857-94ff64ac567c}">
+		<property name="assetPath">
+			<value>Fabric/F7.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.83925000000000005</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fd1df9c6-44a9-4e92-9c67-cb607452be7b}</destination>
+		</relationship>
+	</object>
+</objects>
