@@ -808,3 +808,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752aa45e828f1dc4595a83502f729281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: {fileID: 11400000, guid: d5333bd8593d9d643b30e972c6ea6cf5, type: 2}
