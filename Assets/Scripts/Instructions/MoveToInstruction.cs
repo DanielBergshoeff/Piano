@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 [CreateAssetMenu]
 public class MoveToInstruction : Instruction
 {
+    [FMODUnity.EventRef]
+    public string HotColdEvent;
+
     public AudioClip PositiveSound;
     public AudioClip NeutralSound;
     public AudioClip NegativeSound;
@@ -23,6 +28,8 @@ public class MoveToInstruction : Instruction
 
     private float startDistance;
     private List<AudioSource> myAudioSources;
+
+    private EventInstance hotcold;
 
     public override void OnInitialize(Piano piano) {
         myPiano = piano;
@@ -43,12 +50,19 @@ public class MoveToInstruction : Instruction
         timer = 0f;
         startDistance = (myPiano.Player.transform.position - target.position).sqrMagnitude;
 
+        hotcold = RuntimeManager.CreateInstance(HotColdEvent);
+        hotcold.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
+        hotcold.setParameterByName("Distance", 0f);
+        hotcold.start();
+
         foreach (AudioSource audioSource in myAudioSources) {
             audioSource.Play();
         }
     }
 
     public override void OnStop() {
+        hotcold.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
         foreach(AudioSource audioSource in myAudioSources) {
             audioSource.Stop();
         }
@@ -59,6 +73,7 @@ public class MoveToInstruction : Instruction
         timer += Time.deltaTime;
         float currentDistance = (myPiano.Player.transform.position - target.position).sqrMagnitude;
         float speed = Mathf.Clamp(currentDistance / startDistance, 0f, 1f);
+        hotcold.setParameterByName("Distance", 1f - speed);
         if (timer > Mathf.Lerp(MinTimePerUpdate, MaxTimePerUpdate, speed)) {
             CheckDirection();
             timer = 0f;

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4e709dc27155a4b8d8e1c73967d461, type: 3}
   m_Name: MoveTo
   m_EditorClassIdentifier: 
+  HotColdEvent: event:/Music/HotCold
   PositiveSound: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
   NeutralSound: {fileID: 8300000, guid: 1292b475de1d2ff4a85e7c431ba4f31f, type: 3}
   NegativeSound: {fileID: 8300000, guid: 32f7fa15adf5e3a41b3a72b22837153a, type: 3}
@@ -19,16 +20,16 @@ MonoBehaviour:
   AudioLayers:
   - Clip: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
     StartPoint: 0.1
-    Off: 0
+    Off: 1
   - Clip: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
     StartPoint: 0.3
-    Off: 0
+    Off: 1
   - Clip: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
     StartPoint: 0.6
-    Off: 0
+    Off: 1
   - Clip: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
     StartPoint: 0.8
-    Off: 0
+    Off: 1
   MinTimePerUpdate: 0.3
   MaxTimePerUpdate: 3
   MinMoveDistance: 0.1
