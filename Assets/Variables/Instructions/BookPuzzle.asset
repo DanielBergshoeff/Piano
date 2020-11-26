@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48574f22d33fe9438454f4bf603ed68, type: 3}
+  m_Name: BookPuzzle
+  m_EditorClassIdentifier: 
+  NegativeSound: {fileID: 8300000, guid: 32f7fa15adf5e3a41b3a72b22837153a, type: 3}
+  PositiveSound: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
+  SoundInterval: 0.3
+  SoundTypes: 00000000000001000000
+  UpdateTime: 5
+  InteractionString: {fileID: 11400000, guid: 897900860c1088c4b8c27909bc76b75e, type: 2}
+  InteractionEvent: {fileID: 11400000, guid: c98fe7ddda9780249ad2c7799017caee, type: 2}
