@@ -32,4 +32,4 @@ MonoBehaviour:
   MinTimePerUpdate: 0.3
   MaxTimePerUpdate: 3
   MinMoveDistance: 0.1
-  SuccesDistance: 1.05
+  SuccesDistance: 1.5
