@@ -17,20 +17,21 @@ public class FPCameraController : MonoBehaviour
     {
         //hide and lock cursor to center of the screen
         Cursor.lockState = CursorLockMode.Locked;
+        cameraXRotation.Value = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity.InitialValue * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity.InitialValue * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity.Value * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity.Value * Time.deltaTime;
 
         //prevent over-rotate
-        cameraXRotation.InitialValue -= mouseY;
-        cameraXRotation.InitialValue = Mathf.Clamp(cameraXRotation.InitialValue, -90f, 90f);
+        cameraXRotation.Value -= mouseY;
+        cameraXRotation.Value = Mathf.Clamp(cameraXRotation.Value, -90f, 90f);
 
         //set angles and rotation
-        transform.localRotation = Quaternion.Euler(cameraXRotation.InitialValue, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(cameraXRotation.Value, 0f, 0f);
         playerBody.transform.Rotate(Vector3.up*mouseX);
     }
 }
