@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 [CreateAssetMenu]
 public class ReturnToPianoInstruction : Instruction
 {
-    public AudioClip ReturnToPianoPart;
-    public AudioClip ReturnToPianoFull;
+    [FMODUnity.EventRef]
+    public string PianoBeckon;
+
+    [FMODUnity.EventRef]
+    public string Final;
 
     public float TimePerUpdate = 3f;
     public StringVariable MyTrigger;
@@ -16,6 +21,10 @@ public class ReturnToPianoInstruction : Instruction
     private bool triggerHit = false;
     private Piano myPiano;
     private float timer;
+
+    private EventInstance musicToPlay;
+    private EventInstance finalMusic;
+
 
     public override bool CheckForCompletion() {
         return triggerHit;
@@ -29,11 +38,17 @@ public class ReturnToPianoInstruction : Instruction
         MyTriggerEvent.Register(TriggerHit);
         timer = 0f;
         triggerHit = false;
+
+        musicToPlay = RuntimeManager.CreateInstance(PianoBeckon);
+        musicToPlay.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
     }
 
     public override void OnStop() {
         MyTriggerEvent.Unregister(TriggerHit);
-        myPiano.MyAudioSource.PlayOneShot(ReturnToPianoFull);
+
+        finalMusic = RuntimeManager.CreateInstance(Final);
+        finalMusic.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
+        finalMusic.start();
     }
 
     public override void OnUpdate() {
@@ -46,13 +61,11 @@ public class ReturnToPianoInstruction : Instruction
 
     public void TriggerHit(string trigger) {
         if (trigger == MyTrigger.Value) {
-            Debug.Log("Done");
             triggerHit = true;
         }
     }
 
     public void PlayComeHereSound() {
-        Debug.Log("Come here!");
-        myPiano.MyAudioSource.PlayOneShot(ReturnToPianoPart);
+        musicToPlay.start();
     }
 }

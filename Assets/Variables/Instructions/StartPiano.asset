@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f8f6cbe62f43242bb4c2bd76992a66, type: 3}
   m_Name: StartPiano
   m_EditorClassIdentifier: 
-  SoundToPlay: {fileID: 8300000, guid: a2a21222e7bf3c04b9a84686ac7ce24f, type: 3}
+  SoundToPlay: event:/Music/PianoBeckon
   MyTrigger: {fileID: 11400000, guid: d294975e0a8c7cb4a878c86aad0a6e5e, type: 2}
   MyStringEvent: {fileID: 11400000, guid: 07e12303a950068488ed367def1454f2, type: 2}

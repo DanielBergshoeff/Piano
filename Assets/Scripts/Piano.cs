@@ -7,7 +7,6 @@ using UnityEngine;
 public class Piano : MonoBehaviour
 {
     public List<InstructionToHints> Instructions;
-    public Instruction TestInstruction;
 
     public GameObject Player;
     public Transform Target;
@@ -32,8 +31,8 @@ public class Piano : MonoBehaviour
             ith.MyInstruction.OnInitialize(this);
         }
 
-        //TestInstruction.OnInitialize(this);
-        SwitchInstructions(Instructions[0]);
+        if(Instructions.Count > 0)
+            SwitchInstructions(Instructions[0]);
     }
 
     // Update is called once per frame
@@ -58,8 +57,8 @@ public class Piano : MonoBehaviour
     }
 
     private void NextInstruction() {
-        if (currentInstructionNr + 1 < Instructions.Count)
-            SwitchInstructions(Instructions[currentInstructionNr + 1]);
+        if (currentInstructionNr < Instructions.Count)
+            SwitchInstructions(Instructions[currentInstructionNr]);
         else
             SwitchInstructions(null);
     }
@@ -76,6 +75,7 @@ public class Piano : MonoBehaviour
             currentInstruction = newInstruction.MyInstruction;
             currentHints = newInstruction.MyHints;
             currentInstructionNr++;
+            Debug.Log(newInstruction.MyInstruction.name);
             currentInstructionTimer = 0f;
 
             if (currentInstruction != null)
