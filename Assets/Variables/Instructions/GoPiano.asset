@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db422504acddd84bb30d8be04b3009e, type: 3}
+  m_Name: GoPiano
+  m_EditorClassIdentifier: 
+  ReturnToPianoPart: {fileID: 8300000, guid: 1292b475de1d2ff4a85e7c431ba4f31f, type: 3}
+  ReturnToPianoFull: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
+  TimePerUpdate: 3
+  MyTrigger: {fileID: 11400000, guid: 3e37ccfcf2033054ca132cd29674cff7, type: 2}
+  MyTriggerEvent: {fileID: 11400000, guid: 07e12303a950068488ed367def1454f2, type: 2}
