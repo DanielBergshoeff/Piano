@@ -34,10 +34,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637420026293767033
+  lastModified: 637420214769816758
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6993372024224437000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/CandleLit
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/CandleLit
+  guid: c63c0c0e9950654595299021d08a30f1
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5108
 --- !u!114 &-5726166355990508706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,10 +101,30 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -3818207042635488821}
+  - {fileID: 3992527643757705681}
   MinDistance: 1
   MaxDistance: 20
   Length: 13200
+--- !u!114 &-5307809013347111053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Complete
+  m_EditorClassIdentifier: 
+  Name: Complete
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3818207042635488821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +165,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8008914311483068642}
+  - {fileID: 5527839991751954875}
   MinDistance: 1
   MaxDistance: 20
   Length: 12600
@@ -146,6 +189,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-1737278293007764597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/NoteGrab
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/NoteGrab
+  guid: c87675e0f3c8864f901964ca2869ebdd
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1342
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,13 +231,46 @@ MonoBehaviour:
   - {fileID: 4873792908971081622}
   - {fileID: -5547436390932905207}
   - {fileID: -2498510685200421343}
+  - {fileID: 4990057146423034847}
+  - {fileID: 6355769794255257131}
+  - {fileID: 3787094624083666829}
+  - {fileID: -6993372024224437000}
+  - {fileID: -1737278293007764597}
+  - {fileID: 3045404215359305554}
+  - {fileID: 2030346612786375600}
+  - {fileID: 4695900205452122204}
+  - {fileID: 183696741320189589}
+  - {fileID: 3255012544056622480}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7388128289034281064}
   StringsBanks:
   - {fileID: 7583236570953307846}
-  stringsBankWriteTime: 637420026293627081
+  stringsBankWriteTime: 637420214769516859
   cacheVersion: 5
+--- !u!114 &183696741320189589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/Interface
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/Interface
+  guid: f3964199d380484e9e16f1c14f98b9af
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 434
 --- !u!114 &1928582277322953851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +291,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2030346612786375600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/PianoOpen
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/PianoOpen
+  guid: dc622920683f2f48b62ec6511ee45d0b
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1257
 --- !u!114 &2049252912296865091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +334,118 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3045404215359305554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/Footsteps
+  guid: d8633ef308d5c94b87a03db3c18db074
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 320
+--- !u!114 &3255012544056622480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/PianoSit
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/PianoSit
+  guid: f91ecb76da8074418904af0373ba37ae
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1737
+--- !u!114 &3787094624083666829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/TutorialPrompt
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/TutorialPrompt
+  guid: a768dfb9b05b8a46913fe80a47226d5f
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3802
+--- !u!114 &3992527643757705681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PianoBeckon/At Piano
+  m_EditorClassIdentifier: 
+  Name: At Piano
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4695900205452122204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/BookReturn
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/BookReturn
+  guid: ec7757f3c1b56543a655fcb0591fa069
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 433
 --- !u!114 &4873792908971081622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,11 +466,97 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8511618159724002490}
-  - {fileID: -5726166355990508706}
+  - {fileID: 5285846656149135429}
+  - {fileID: -5307809013347111053}
   MinDistance: 1
   MaxDistance: 20
   Length: 138181
+--- !u!114 &4990057146423034847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/BookGrab
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/BookGrab
+  guid: 032c51f91b489f4292d64388fbed55d7
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 548
+--- !u!114 &5285846656149135429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &5527839991751954875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BookNotes/Correct
+  m_EditorClassIdentifier: 
+  Name: Correct
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &6355769794255257131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/PianoBonk
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/PianoBonk
+  guid: 9116d689867adb46a259ca726b6c1feb
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1826
 --- !u!114 &7583236570953307846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,11 +571,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637420026293627081
+  lastModified: 637420214769516859
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1020
+    Value: 1470
   Exists: 1
 --- !u!114 &8008914311483068642
 MonoBehaviour:
