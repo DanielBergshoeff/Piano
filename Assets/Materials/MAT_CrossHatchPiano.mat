@@ -130,7 +130,7 @@ Material:
     - Boolean_5EE0542: 0
     - Boolean_60C55CE0: 1
     - Boolean_6A7C316A: 1
-    - Boolean_93DD2C52: 1
+    - Boolean_93DD2C52: 0
     - Boolean_C0F545BD: 0
     - Boolean_E8130914: 1
     - Vector1_12295BBD: 0.06
@@ -161,7 +161,7 @@ Material:
     - Vector1_F5AB300C: 15.76
     - Vector1_FE550F3: 2
     - Vector1_FEDC6934: 8
-    - _SelectObject: 1
+    - _SelectObject: 0
     m_Colors:
     - Color_325186FB: {r: 0.8301887, g: 0.8071361, b: 0.6774653, a: 0}
     - Color_778F1D67: {r: 0, g: 0, b: 0, a: 0}
