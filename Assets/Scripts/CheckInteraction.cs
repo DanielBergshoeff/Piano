@@ -20,7 +20,7 @@ public class CheckInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        promptInteract.gameObject.SetActive(false);//this somehow decreases the glitch a little
+        
     }
 
     // Update is called once per frame
@@ -30,11 +30,11 @@ public class CheckInteraction : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, raycastRange.InitialValue)) { //if you hit something
             if (hit.transform.tag != "Interactable")
             {
-                promptInteract.gameObject.SetActive(false);
+                promptInteract.SetText("");
             }
             else
             {
-                promptInteract.gameObject.SetActive(true);
+                promptInteract.SetText("Press 'E' to interact");
             }
         }
 
