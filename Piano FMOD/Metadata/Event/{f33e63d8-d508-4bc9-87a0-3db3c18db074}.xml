@@ -80,9 +80,6 @@
 			<destination>{d886cf64-fbed-46b7-a7e9-810f7b96e283}</destination>
 			<destination>{e13c5cf7-6c86-447c-b7e0-81a189b24e09}</destination>
 		</relationship>
-		<relationship name="markers">
-			<destination>{b4408744-fa3b-4312-8e42-a3ed5925b1ca}</destination>
-		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{93f4bc51-d327-49cd-b11a-aa2d313e49e6}">
 		<relationship name="effectChain">
@@ -124,7 +121,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{bececabd-ec1d-488e-9354-aa268e7c279f}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Footsteps</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{02d6175f-28b5-4db8-823c-d6ca79e3d976}</destination>
@@ -165,7 +162,7 @@
 			<value>-23.5</value>
 		</property>
 		<property name="name">
-			<value>Audio 2</value>
+			<value>Fabric</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{c7698377-850d-49cf-8509-07f79f569bd4}</destination>
@@ -175,17 +172,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{93f4bc51-d327-49cd-b11a-aa2d313e49e6}</destination>
-		</relationship>
-	</object>
-	<object class="SustainPoint" id="{b4408744-fa3b-4312-8e42-a3ed5925b1ca}">
-		<property name="position">
-			<value>0.3203125</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{39b64265-93a4-4901-863f-ee426d0fa28b}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{e7e7ab9d-4ecd-407e-8fbc-521f2716ba0d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{8cddafbf-cbb3-4a5b-a970-fdc2ea4f745f}">
