@@ -2591,8 +2591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf8559cee2e3bc40987784b1681a5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupSound: event:/Sound Design/BookGrab
-  DroppedSound: event:/Sound Design/BookReturn
+  PickupSound: event:/Sound Design/MatchBoxGrab
+  DroppedSound: event:/Sound Design/MatchBoxGrab
   Name: matchbox
   InventoryObject: {fileID: 11400000, guid: 7524095eaad8bb54ebb39a874e603691, type: 2}
 --- !u!65 &174122602
@@ -3079,6 +3079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d515ed968baab94882c5b4f73996337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractSound: event:/Sound Design/CandleLit
   Name: {fileID: 11400000, guid: 1db9b686cf27f124eb2f7b8c7deaa7cb, type: 2}
   NecessaryObject: {fileID: 11400000, guid: 7524095eaad8bb54ebb39a874e603691, type: 2}
   LightPart: {fileID: 687559319}
@@ -13729,6 +13730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40a4b7cab56d744a84bdb20a94d0835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractSound: event:/Sound Design/NoteGrab
   Name: {fileID: 11400000, guid: 92edc735b28ecbe4081aaac1dc7212d7, type: 2}
   NecessaryObject: {fileID: 0}
   CloseUpEvent: {fileID: 11400000, guid: 393275d8a09e06b44b123aed3b2fad23, type: 2}
@@ -30781,6 +30783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40a4b7cab56d744a84bdb20a94d0835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractSound: 
   Name: {fileID: 11400000, guid: 92edc735b28ecbe4081aaac1dc7212d7, type: 2}
   NecessaryObject: {fileID: 0}
   CloseUpEvent: {fileID: 11400000, guid: 393275d8a09e06b44b123aed3b2fad23, type: 2}

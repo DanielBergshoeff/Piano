@@ -22,6 +22,7 @@ public class Candle : Interactable
     }
 
     public void Light() {
+        PlaySound();
         LightPart.SetActive(true);
     }
 }

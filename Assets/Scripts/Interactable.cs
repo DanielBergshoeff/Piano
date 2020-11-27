@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 public abstract class Interactable : MonoBehaviour
 {
+    [FMODUnity.EventRef]
+    public string InteractSound;
+
     public StringVariable Name;
     public StringVariable NecessaryObject;
 
@@ -15,4 +20,10 @@ public abstract class Interactable : MonoBehaviour
     }
 
     public abstract bool Interact(string itemHeld);
+
+    public virtual void PlaySound() {
+        EventInstance interactSound = RuntimeManager.CreateInstance(InteractSound);
+        interactSound.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        interactSound.start();
+    }
 }

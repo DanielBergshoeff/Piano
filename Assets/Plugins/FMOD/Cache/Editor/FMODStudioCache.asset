@@ -21,7 +21,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 1257
 --- !u!114 &-8199090097076721977
 MonoBehaviour:
@@ -44,7 +44,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 5108
 --- !u!114 &-8164749026634791899
 MonoBehaviour:
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637420824256305687
+  lastModified: 637420840302489327
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 3483
 --- !u!114 &-5562612720717183302
 MonoBehaviour:
@@ -248,7 +248,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 6000
 --- !u!114 &-5547436390932905207
 MonoBehaviour:
@@ -294,7 +294,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 3000
 --- !u!114 &-4935857263943701800
 MonoBehaviour:
@@ -357,7 +357,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 3483
 --- !u!114 &-4489597803331401916
 MonoBehaviour:
@@ -460,7 +460,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 548
 --- !u!114 &-2498510685200421343
 MonoBehaviour:
@@ -525,6 +525,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1830088734266890901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1535766718971995654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +626,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 3000
 --- !u!114 &-87355078953961633
 MonoBehaviour:
@@ -629,7 +649,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 3802
 --- !u!114 &11400000
 MonoBehaviour:
@@ -664,12 +684,13 @@ MonoBehaviour:
   - {fileID: -5562612720717183302}
   - {fileID: -6212632517053889999}
   - {fileID: -4602792377555677951}
+  - {fileID: 2780080376564917383}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7388128289034281064}
   StringsBanks:
   - {fileID: 7583236570953307846}
-  stringsBankWriteTime: 637420818687537706
+  stringsBankWriteTime: 637420840302159415
   cacheVersion: 5
 --- !u!114 &321942574524058921
 MonoBehaviour:
@@ -691,6 +712,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &877745431438783333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Complete
+  m_EditorClassIdentifier: 
+  Name: Complete
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &885336687794926272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +773,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 1342
 --- !u!114 &1266848228695140275
 MonoBehaviour:
@@ -854,6 +895,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2780080376564917383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Design/MatchBoxGrab
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Design/MatchBoxGrab
+  guid: 62946afd283a994a80e3a8870fdad11c
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 972
 --- !u!114 &3008158816147251748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +979,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 434
 --- !u!114 &4030066257619591794
 MonoBehaviour:
@@ -936,7 +1000,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4304387428203509656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -958,7 +1022,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 320
 --- !u!114 &4358763282486001966
 MonoBehaviour:
@@ -1001,7 +1065,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 1826
 --- !u!114 &4873792908971081622
 MonoBehaviour:
@@ -1023,10 +1087,10 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 7271029231754459084}
-  - {fileID: 4030066257619591794}
+  - {fileID: -1830088734266890901}
+  - {fileID: 877745431438783333}
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 138181
 --- !u!114 &5032859856181481720
 MonoBehaviour:
@@ -1049,7 +1113,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 433
 --- !u!114 &5295190385828069430
 MonoBehaviour:
@@ -1112,7 +1176,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 1737
 --- !u!114 &7271029231754459084
 MonoBehaviour:
@@ -1133,7 +1197,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7440514425664608133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,11 +1232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637420818687537706
+  lastModified: 637420840302159415
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1566
+    Value: 1608
   Exists: 1
 --- !u!114 &8182060486051634071
 MonoBehaviour:
