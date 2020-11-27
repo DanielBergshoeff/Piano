@@ -10,12 +10,12 @@ public class MoveToInstruction : Instruction
     [FMODUnity.EventRef]
     public string HotColdEvent;
 
-    public AudioClip PositiveSound;
-    public AudioClip NeutralSound;
-    public AudioClip NegativeSound;
-    public AudioClip CompletedSound;
+    [FMODUnity.EventRef]
+    public string MovedTowardsSound;
 
-    public List<AudioLayer> AudioLayers;
+    [FMODUnity.EventRef]
+    public string MovedAwaySound;
+
 
     private Piano myPiano;
     private Transform target;
@@ -27,21 +27,11 @@ public class MoveToInstruction : Instruction
     private float timer;
 
     private float startDistance;
-    private List<AudioSource> myAudioSources;
 
     private EventInstance hotcold;
 
     public override void OnInitialize(Piano piano) {
         myPiano = piano;
-        myAudioSources = new List<AudioSource>();
-        foreach(AudioLayer al in AudioLayers) {
-            AudioSource audioSource = piano.gameObject.AddComponent<AudioSource>();
-            audioSource.clip = al.Clip;
-            audioSource.loop = true;
-            audioSource.spatialBlend = 1f;
-            audioSource.volume = 0f;
-            myAudioSources.Add(audioSource);
-        }
     }
 
     public override void OnStart() {
@@ -54,19 +44,10 @@ public class MoveToInstruction : Instruction
         hotcold.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
         hotcold.setParameterByName("Distance", 0f);
         hotcold.start();
-
-        foreach (AudioSource audioSource in myAudioSources) {
-            audioSource.Play();
-        }
     }
 
     public override void OnStop() {
-        hotcold.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-
-        foreach(AudioSource audioSource in myAudioSources) {
-            audioSource.Stop();
-        }
-        myPiano.MyAudioSource.PlayOneShot(CompletedSound);
+        hotcold.setParameterByName("Complete", 1f);
     }
 
     public override void OnUpdate() {
@@ -77,17 +58,6 @@ public class MoveToInstruction : Instruction
         if (timer > Mathf.Lerp(MinTimePerUpdate, MaxTimePerUpdate, speed)) {
             CheckDirection();
             timer = 0f;
-        }
-
-        for (int i = 0; i < AudioLayers.Count; i++) {
-            if(AudioLayers[i].Off && AudioLayers[i].StartPoint < 1f - speed) {
-                myAudioSources[i].volume = 1f;
-                AudioLayers[i].Off = false;
-            }
-            else if(!AudioLayers[i].Off && AudioLayers[i].StartPoint > 1f - speed) {
-                myAudioSources[i].volume = 0f;
-                AudioLayers[i].Off = true;
-            }
         }
     }
 
@@ -121,17 +91,20 @@ public class MoveToInstruction : Instruction
 
     private void PlayerMovedTowards() {
         Debug.Log("Player moved towards target");
-        myPiano.MyAudioSource.PlayOneShot(PositiveSound);
+        EventInstance movedTowards = RuntimeManager.CreateInstance(MovedTowardsSound);
+        movedTowards.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
+        movedTowards.start();
     }
 
     private void PlayerMovedAway() {
         Debug.Log("Player moved away from target");
-        myPiano.MyAudioSource.PlayOneShot(NegativeSound);
+        EventInstance movedAway = RuntimeManager.CreateInstance(MovedAwaySound);
+        movedAway.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
+        movedAway.start();
     }
 
     private void PlayerStayed() {
         Debug.Log("Player didn't move");
-        myPiano.MyAudioSource.PlayOneShot(NeutralSound);
     }
 }
 
