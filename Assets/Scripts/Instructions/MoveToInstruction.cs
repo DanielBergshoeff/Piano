@@ -65,7 +65,6 @@ public class MoveToInstruction : Instruction
     public override bool CheckForCompletion() {
         float dist = (myPiano.Player.transform.position - target.position).sqrMagnitude;
         if(dist < SuccesDistance * SuccesDistance) {
-            Debug.Log(dist);
             return true;
         }
 

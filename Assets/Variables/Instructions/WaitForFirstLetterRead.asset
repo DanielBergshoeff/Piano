@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51627a08573f7a4fa967a31d55a9d13, type: 3}
   m_Name: WaitForFirstLetterRead
   m_EditorClassIdentifier: 
+  DoSomethingSound: event:/Music/DoSomething
+  TimePerUpdate: 3
   EndEvent: {fileID: 11400000, guid: 2a5399a7d4e73834fbd481ac2af6f543, type: 2}
   MyValue: {fileID: 11400000, guid: 92edc735b28ecbe4081aaac1dc7212d7, type: 2}

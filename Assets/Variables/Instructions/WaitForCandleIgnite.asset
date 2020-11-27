@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51627a08573f7a4fa967a31d55a9d13, type: 3}
   m_Name: WaitForCandleIgnite
   m_EditorClassIdentifier: 
+  DoSomethingSound: event:/Music/DoSomething
+  TimePerUpdate: 3
   EndEvent: {fileID: 11400000, guid: 43d194b5db26ca34486d45b4fea2d436, type: 2}
   MyValue: {fileID: 11400000, guid: 1db9b686cf27f124eb2f7b8c7deaa7cb, type: 2}

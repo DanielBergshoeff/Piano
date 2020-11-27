@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637420840302489327
+  lastModified: 637420865142248206
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -399,6 +399,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3559758848163603431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Complete
+  m_EditorClassIdentifier: 
+  Name: Complete
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3253066675065562648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,12 +705,13 @@ MonoBehaviour:
   - {fileID: -6212632517053889999}
   - {fileID: -4602792377555677951}
   - {fileID: 2780080376564917383}
+  - {fileID: 9150050993994281683}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7388128289034281064}
   StringsBanks:
   - {fileID: 7583236570953307846}
-  stringsBankWriteTime: 637420840302159415
+  stringsBankWriteTime: 637420861798807456
   cacheVersion: 5
 --- !u!114 &321942574524058921
 MonoBehaviour:
@@ -1087,8 +1108,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -1830088734266890901}
-  - {fileID: 877745431438783333}
+  - {fileID: 7974582315422113670}
+  - {fileID: -3559758848163603431}
   MinDistance: 1
   MaxDistance: 50
   Length: 138181
@@ -1232,11 +1253,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637420840302159415
+  lastModified: 637420861798807456
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1608
+    Value: 1650
+  Exists: 1
+--- !u!114 &7974582315422113670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &8182060486051634071
 MonoBehaviour:
@@ -1298,3 +1339,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &9150050993994281683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/DoSomething
+  m_EditorClassIdentifier: 
+  Path: event:/Music/DoSomething
+  guid: b788771dfefe1544bce17b8dd6a06cd2
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 3225

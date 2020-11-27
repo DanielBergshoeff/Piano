@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51627a08573f7a4fa967a31d55a9d13, type: 3}
   m_Name: WaitForPickupMatches
   m_EditorClassIdentifier: 
+  DoSomethingSound: event:/Music/DoSomething
+  TimePerUpdate: 3
   EndEvent: {fileID: 11400000, guid: 548cd50474f3b4941a124aa657b3d327, type: 2}
   MyValue: {fileID: 11400000, guid: 7524095eaad8bb54ebb39a874e603691, type: 2}
