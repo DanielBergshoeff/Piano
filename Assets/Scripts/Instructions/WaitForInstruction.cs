@@ -20,8 +20,8 @@ public class WaitForInstruction : Instruction
     }
 
     public override void OnStart() {
-        EndEvent.Register(WaitEnded);
         eventCalled = false;
+        EndEvent.Register(WaitEnded);
     }
 
     public override void OnStop() {

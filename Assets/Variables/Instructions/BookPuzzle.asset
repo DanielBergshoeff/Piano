@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48574f22d33fe9438454f4bf603ed68, type: 3}
   m_Name: BookPuzzle
   m_EditorClassIdentifier: 
-  NegativeSound: {fileID: 8300000, guid: 32f7fa15adf5e3a41b3a72b22837153a, type: 3}
-  PositiveSound: {fileID: 8300000, guid: 8ff46e5160977cb4fa9721f90e750aeb, type: 3}
+  PositiveSound: event:/Music/BookNoteHigh
+  NegativeSound: event:/Music/BookNoteLow
   SoundInterval: 0.3
   SoundTypes: 00000000000001000000
   UpdateTime: 5

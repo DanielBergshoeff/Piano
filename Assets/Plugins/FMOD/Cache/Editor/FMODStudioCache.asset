@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637420190817705313
+  lastModified: 637420662635000860
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -177,6 +177,26 @@ MonoBehaviour:
   m_Name: parameter:/BookNotes/Correct
   m_EditorClassIdentifier: 
   Name: Correct
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6608395206762335032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Complete
+  m_EditorClassIdentifier: 
+  Name: Complete
   Min: 0
   Max: 1
   Default: 0
@@ -204,10 +224,33 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8182060486051634071}
+  - {fileID: 885336687794926272}
   MinDistance: 1
   MaxDistance: 20
   Length: 13200
+--- !u!114 &-5052615598483405865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BookNoteHigh
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BookNoteHigh
+  guid: 67e635c0556a3544aa1f6cce25ae81b4
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-4935857263943701800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +330,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3253066675065562648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,8 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/BookNotes
   guid: 9df4521b22ed2140a9a8b631020b31e5
-  Banks:
-  - {fileID: -7388128289034281064}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -475,6 +517,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-284321606426653432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BookNoteLow
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BookNoteLow
+  guid: 9df4521b22ed2140a9a8b631020b31e5
+  Banks:
+  - {fileID: -7388128289034281064}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-87355078953961633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +581,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 4873792908971081622}
   - {fileID: -5547436390932905207}
-  - {fileID: -2498510685200421343}
   - {fileID: 4304387428203509656}
   - {fileID: -2568435395553351224}
   - {fileID: 5032859856181481720}
@@ -527,12 +591,14 @@ MonoBehaviour:
   - {fileID: -8199090097076721977}
   - {fileID: 1159582390966263202}
   - {fileID: 3879749228221102332}
+  - {fileID: -5052615598483405865}
+  - {fileID: -284321606426653432}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7388128289034281064}
   StringsBanks:
   - {fileID: 7583236570953307846}
-  stringsBankWriteTime: 637420190817765368
+  stringsBankWriteTime: 637420662634810815
   cacheVersion: 5
 --- !u!114 &321942574524058921
 MonoBehaviour:
@@ -554,6 +620,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &885336687794926272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PianoBeckon/At Piano
+  m_EditorClassIdentifier: 
+  Name: At Piano
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &1159582390966263202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +888,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4431701754048911766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,8 +932,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -4133122420486459460}
-  - {fileID: 4358763282486001966}
+  - {fileID: 5295190385828069430}
+  - {fileID: -6608395206762335032}
   MinDistance: 1
   MaxDistance: 20
   Length: 138181
@@ -874,6 +960,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 433
+--- !u!114 &5295190385828069430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HotCold/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5715880719372263034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,11 +1057,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Piano FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637420190817765368
+  lastModified: 637420662634810815
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1470
+    Value: 1472
   Exists: 1
 --- !u!114 &8182060486051634071
 MonoBehaviour:
@@ -976,7 +1082,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8235256399112743438
 MonoBehaviour:
   m_ObjectHideFlags: 0

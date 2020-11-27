@@ -9,8 +9,6 @@ public class Piano : MonoBehaviour
     public List<InstructionToHints> Instructions;
 
     public GameObject Player;
-    public Transform Target;
-
     public StringEvent DialogueEvent;
 
     [HideInInspector]
@@ -56,6 +54,16 @@ public class Piano : MonoBehaviour
         }
     }
 
+    public Transform GetTarget(Instruction i) {
+        foreach(InstructionToHints ith in Instructions) {
+            if(ith.MyInstruction == i) {
+                return ith.Target;
+            }
+        }
+
+        return null;
+    }
+
     private void NextInstruction() {
         if (currentInstructionNr < Instructions.Count)
             SwitchInstructions(Instructions[currentInstructionNr]);
@@ -89,6 +97,7 @@ public class InstructionToHints
 {
     public Instruction MyInstruction;
     public List<Hint> MyHints;
+    public Transform Target;
 }
 
 [System.Serializable]

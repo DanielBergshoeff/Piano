@@ -38,9 +38,6 @@ public class ReturnToPianoInstruction : Instruction
         MyTriggerEvent.Register(TriggerHit);
         timer = 0f;
         triggerHit = false;
-
-        musicToPlay = RuntimeManager.CreateInstance(PianoBeckon);
-        musicToPlay.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
     }
 
     public override void OnStop() {
@@ -66,6 +63,8 @@ public class ReturnToPianoInstruction : Instruction
     }
 
     public void PlayComeHereSound() {
+        musicToPlay = RuntimeManager.CreateInstance(PianoBeckon);
+        musicToPlay.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
         musicToPlay.start();
     }
 }

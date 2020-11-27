@@ -48,10 +48,14 @@ public class Pickup : MonoBehaviour
                 if (Input.GetMouseButtonDown(0)) {
                     Interactable i = hit.collider.GetComponent<Interactable>();
                     if(holdingItem == null) {
-                        i.Interact(null);
+                        if (i.Interact(null)) {
+                            InteractEvent.Raise(i.Name.Value);
+                        }
                     }
                     else {
-                        i.Interact(holdingItem.InventoryObject.Value);
+                        if(i.Interact(holdingItem.InventoryObject.Value)) {
+                            InteractEvent.Raise(i.Name.Value);
+                        }
                     }
                 }
 
@@ -99,6 +103,7 @@ public class Pickup : MonoBehaviour
                     p.transform.parent = Camera.main.transform;
                     p.transform.localPosition = new Vector3(0.3f, -0.2f, 0.4f);
                     p.transform.localRotation = Quaternion.identity;
+                    PickupEvent.Raise(p.InventoryObject.Value);
                     DropCanvas.SetActive(true);
                     dropCanvasText.text = "Drop " + hit.collider.name;
                 }

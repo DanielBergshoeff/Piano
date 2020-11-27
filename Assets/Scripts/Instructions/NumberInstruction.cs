@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using FMOD.Studio;
+using FMODUnity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
@@ -6,8 +8,12 @@ using UnityEngine;
 [CreateAssetMenu]
 public class NumberInstruction : Instruction
 {
-    public AudioClip NegativeSound;
-    public AudioClip PositiveSound;
+    [FMODUnity.EventRef]
+    public string PositiveSound;
+
+    [FMODUnity.EventRef]
+    public string NegativeSound;
+
     public float SoundInterval = 0.3f;
     [Tooltip("True is positive, false is negative")]
     public List<bool> SoundTypes;
@@ -63,7 +69,9 @@ public class NumberInstruction : Instruction
 
     private void RepeatSound(int s) {
         if(s < SoundTypes.Count) {
-            myAudioSource.PlayOneShot(SoundTypes[s] ? PositiveSound : NegativeSound);
+            EventInstance stepSound = RuntimeManager.CreateInstance(SoundTypes[s] ? PositiveSound : NegativeSound);
+            stepSound.set3DAttributes(RuntimeUtils.To3DAttributes(myPiano.transform));
+            stepSound.start();
         }
         else {
             timer = 0f;

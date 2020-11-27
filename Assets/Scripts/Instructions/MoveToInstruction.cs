@@ -46,7 +46,7 @@ public class MoveToInstruction : Instruction
 
     public override void OnStart() {
         startPosition = myPiano.Player.transform.position;
-        target = myPiano.Target;
+        target = myPiano.GetTarget(this);
         timer = 0f;
         startDistance = (myPiano.Player.transform.position - target.position).sqrMagnitude;
 
