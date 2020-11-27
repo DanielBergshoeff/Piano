@@ -16,6 +16,6 @@ MonoBehaviour:
   MovedTowardsSound: event:/Music/CloserPing
   MovedAwaySound: event:/Music/FurtherPing
   MinTimePerUpdate: 0.3
-  MaxTimePerUpdate: 3
+  MaxTimePerUpdate: 2
   MinMoveDistance: 0.1
   SuccesDistance: 1.5
