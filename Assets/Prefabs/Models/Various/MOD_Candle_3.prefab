@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6262343464025859210}
   - component: {fileID: 2373588838428215194}
   - component: {fileID: 2261544383380281509}
+  - component: {fileID: 8859080003855563866}
   m_Layer: 0
   m_Name: MOD_Candle_3
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3420864350175675340}
-  m_LocalRotation: {x: -0.000000081460335, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5904, y: 1.5904, z: 1.5904}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &8859080003855563866
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3420864350175675340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.06033103
+  m_Height: 0.12066211
+  m_Direction: 1
+  m_Center: {x: 0.009749296, y: 0.04737442, z: 0.0009156811}
