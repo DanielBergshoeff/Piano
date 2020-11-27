@@ -5491,7 +5491,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a25298a31730f0945a4d38f3c9111bd0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7159996
+      value: 1.666
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a25298a31730f0945a4d38f3c9111bd0,
         type: 3}
@@ -5501,7 +5501,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a25298a31730f0945a4d38f3c9111bd0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5620003
+      value: -2.781
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a25298a31730f0945a4d38f3c9111bd0,
         type: 3}
@@ -9838,7 +9838,7 @@ PrefabInstance:
     - target: {fileID: 1667687311170321739, guid: f920c9ecdbfca5c40b109dc1cfa1b148,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1728588108192297966, guid: f920c9ecdbfca5c40b109dc1cfa1b148,
         type: 3}
@@ -23496,7 +23496,7 @@ PrefabInstance:
     - target: {fileID: 1667687311170321739, guid: f920c9ecdbfca5c40b109dc1cfa1b148,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1728588108192297966, guid: f920c9ecdbfca5c40b109dc1cfa1b148,
         type: 3}
@@ -30783,7 +30783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40a4b7cab56d744a84bdb20a94d0835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractSound: 
+  InteractSound: event:/Sound Design/NoteGrab
   Name: {fileID: 11400000, guid: 92edc735b28ecbe4081aaac1dc7212d7, type: 2}
   NecessaryObject: {fileID: 0}
   CloseUpEvent: {fileID: 11400000, guid: 393275d8a09e06b44b123aed3b2fad23, type: 2}

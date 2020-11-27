@@ -36,7 +36,8 @@ public class MoveToInstruction : Instruction
 
     public override void OnStart() {
         startPosition = myPiano.Player.transform.position;
-        target = myPiano.GetTarget(this);
+        target = myPiano.GetTarget();
+        Debug.Log(target.name);
         timer = 0f;
         startDistance = (myPiano.Player.transform.position - target.position).sqrMagnitude;
 
@@ -64,6 +65,7 @@ public class MoveToInstruction : Instruction
     public override bool CheckForCompletion() {
         float dist = (myPiano.Player.transform.position - target.position).sqrMagnitude;
         if(dist < SuccesDistance * SuccesDistance) {
+            Debug.Log(dist);
             return true;
         }
 

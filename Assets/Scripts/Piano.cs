@@ -54,14 +54,8 @@ public class Piano : MonoBehaviour
         }
     }
 
-    public Transform GetTarget(Instruction i) {
-        foreach(InstructionToHints ith in Instructions) {
-            if(ith.MyInstruction == i) {
-                return ith.Target;
-            }
-        }
-
-        return null;
+    public Transform GetTarget() {
+        return Instructions[currentInstructionNr - 1].Target;
     }
 
     private void NextInstruction() {
