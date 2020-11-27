@@ -137,7 +137,6 @@
 		<property name="length">
 			<value>0.3203125</value>
 		</property>
-		<property name="name" />
 		<relationship name="modulators">
 			<destination>{10fce004-2d14-414c-b9dc-82cf793a275f}</destination>
 		</relationship>
@@ -322,7 +321,11 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{d160d667-cf84-4056-8aa6-da5044a1e2c7}" />
-	<object class="SpatialiserEffect" id="{31a40ff8-5861-4bd0-93a8-3bd15251a5d1}" />
+	<object class="SpatialiserEffect" id="{31a40ff8-5861-4bd0-93a8-3bd15251a5d1}">
+		<property name="maximumDistance">
+			<value>50</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{e2d60c62-4a75-423e-81e9-b561ab3e2d3f}">
 		<property name="position">
 			<value>0</value>
